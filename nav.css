@@ -54,3 +54,20 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.search-button:hover {
+    background-color: #000000;
+  }
+
+.search-box::placeholder{
+    color: rgb(255, 0, 0);
+}
+
+.nav-items a{
+    margin-left: 20px;
+    padding: 3px;
+}
+
+.nav-items a img{
+    width: 30px;
+}
