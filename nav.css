@@ -71,3 +71,15 @@
 .nav-items a img{
     width: 30px;
 }
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid black;
+    justify-content: space-evenly;
+   
+}
+
