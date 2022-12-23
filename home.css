@@ -46,3 +46,30 @@ body{
   .image:hover img{
       opacity: 1;
   }
+  .image .details{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+}
+
+.image .details h2{
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 70px;
+	transition: 1s;
+	transition-property: transform;
+}
+
+.image .details h2 span{
+	font-weight: 900;
+}
+
+.image:hover .details h2{
+	transform: translateY(-30px);
+}
