@@ -17,3 +17,14 @@
     display: flex;
     justify-content: space-between;
 }
+.brand-logo{
+    height: 60px;
+}
+.nav-items{
+    display:flex;
+    align-items: center;
+}
+.search{
+    width: 500px;
+    display: flex;
+}
