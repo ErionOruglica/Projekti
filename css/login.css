@@ -54,3 +54,33 @@ section .signin .Permbajtja .form{
     flex-direction: column;
     gap: 25px;
 }
+section .signin .Permbajtja .form .inputBx{
+    position: relative;
+    width: 100%;
+}
+section .signin .Permbajtja .form .inputBx input{
+    position: relative;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+section .signin .Permbajtja .form .inputBx i{
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #aaa;
+    transition: 0.5s;
+    pointer-events: none;
+}
+section .signin .Permbajtja .form .inputBx input :focus ~i{
+    transform: translateY(-7.5px);
+}
+
+
