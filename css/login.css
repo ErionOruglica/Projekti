@@ -16,6 +16,27 @@ body{
 
 section{
     position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .signin{
+    position: absolute;
+    width: 400px;
+    background: #222;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+section .signin .Permbajtja{
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
