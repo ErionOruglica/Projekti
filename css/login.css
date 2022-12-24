@@ -79,8 +79,32 @@ section .signin .Permbajtja .form .inputBx i{
     transition: 0.5s;
     pointer-events: none;
 }
-section .signin .Permbajtja .form .inputBx input :focus ~i{
+.signin .Permbajtja .form .inputBx input:focus ~i,
+.signin .Permbajtja .form .inputBx input:valid ~i{
     transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: white;
+}
+.signin .Permbajtja .form .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-
+.signin .Permbajtja .form .links a{
+  color: white;
+  text-decoration: none;
+}
+.signin .Permbajtja .form .links a:nth-child(2){
+    color: orangered;
+    font-weight: 600;
+  }
+  .signin .Permbajtja .form .inputBx input[type="submit"]{
+    padding: 10px;
+    background: orangered;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
