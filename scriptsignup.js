@@ -52,6 +52,6 @@ function validate(){
         }
     else{
         alert("Jeni kycur me sukses! Tani do te ktheheni ne Home page");
-        window.location="index.html";
+        window.location="loginpage.html";
     }
 }
