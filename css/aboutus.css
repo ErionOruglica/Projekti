@@ -11,10 +11,32 @@ body{
     justify-content: center;
     background-color: #f1f1f1;
 }
-.about-section{
-    background: url(Fotot/photo-1624705002806-5d72df19c3ad.jpg) no-repeat left;
-    background-size: 55%;
+
+.inner-container{
+    width: 55%;
+    float: right;
     background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
+    padding: 150px;
+    border: 1px solid black;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.pershkrimi{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.Faleminderit{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
 }
