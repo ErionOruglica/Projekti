@@ -519,3 +519,9 @@ body{
  display: inline-block;
  margin: 40px;
 }
+.class-rreshti1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
