@@ -11,6 +11,7 @@ body{
 	height: 100vh;
 	font-family: "Raleway", sans-serif;
 	background: #ffffff;
+    scroll-behavior: smooth;
 }
 
 .container{
@@ -517,4 +518,10 @@ body{
  height: 40px;
  display: inline-block;
  margin: 40px;
+}
+.class-rreshti1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
