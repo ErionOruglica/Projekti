@@ -11,3 +11,10 @@ body{
     justify-content: center;
     background-color: #f1f1f1;
 }
+.about-section{
+    background: url(Fotot/photo-1624705002806-5d72df19c3ad.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
