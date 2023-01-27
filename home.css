@@ -120,7 +120,14 @@ body{
 
 /* css per kartat mas ballines */
 
+.ballina {
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  max-width: 1920px;
+  max-height: 420px;
 
+}
 
 
 
@@ -517,4 +524,24 @@ body{
  height: 40px;
  display: inline-block;
  margin: 40px;
+}
+
+.Ballinaa{
+  object-fit: fill;
+  width: 100%;
+}
+
+@media (max-width:1080px) { 
+  .image{
+    flex:100%;
+    max-width: 480px;
+  }
+}
+@media (max-width:400px) { 
+  .image .details p{
+    font-size:16px;
+  }
+  .more .read-more{
+    font-size: 18px;
+  }
 }

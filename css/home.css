@@ -1,6 +1,6 @@
 @import 'nav.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -34,6 +34,7 @@ body{
       height: 400px;
       margin: 20px;
       overflow: hidden;
+      
   }
   
   .image img{
@@ -42,6 +43,8 @@ body{
       vertical-align: top;
       transition: 0.6s;
       transition-property: opacity;
+      width: 100%;
+      height: 100%;
   }
   
   .image:hover img{
@@ -424,104 +427,115 @@ body{
   /*css per mallin */
 
   /* css per footer */
-  .footer-container{
+  .kontenjeri{
     max-width: 1170px;
-    margin: auto;
+    margin:auto;
   }
-
-  .footer-row{
+  .rreshti{
     display: flex;
     flex-wrap: wrap;
   }
-  .rreshtiimage{
-    position:relative;
-    height: 160px;
-    width:25%;
+  .footer-col ul{
+    list-style: none;
   }
-  .rreshtiimage .logo-image{
-    display:inline;
-    width:250px;
-    position:absolute;
-    right: 250px;
+  .footer{
+    background-color: #24262b;
+      padding: 70px 0;
   }
-  ul{
-    list-style:none;
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
   }
-.footer{
-  background-color: rgb(228, 224, 224);
-  padding: 70px 0;
-}
-.rreshti1{
-  width: 25%;
-  padding: 0 60px;
-}
-.rreshti1 h4{
-  font-size: 18px;
-  color: #000000;
-  text-transform: capitalize;
-  margin-bottom:35px;
-  font-weight: 800;
-  position: relative;
-}
-.rreshti1 h4::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  background-color: #fc0000;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-
-.rreshti1 ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-.rreshti1 ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 400;
-  color: #1a1919;
-  display: block;
-  transition: all 0.3s ease-out;
-}
-.rreshti1 ul li a:hover{
-  color: rgb(179, 12, 12);
-  padding-left: 10px;
-}
-
-.social-logos{
-  background-color: antiquewhite;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 0px;
-  text-align: center;
-  position: relative;
-}
-.social-logos h6{
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 40px;
-  bottom: 30px;
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
   
-}
-.social-logos a{
- right:80px;
- font-size: 22px;
- width: 70px;
- height: 40px;
- display: inline-block;
- margin: 40px;
-}
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+/*mbarimi i footerit */
+
+
+
 .class-rreshti1{
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.Ballinaa{
+  width: 100%;
+}
+
+@media (max-width:1080px) { 
+  .image{
+    flex:100%;
+    max-width: 480px;
+  }
+}
+@media (max-width:400px) { 
+  .image .details p{
+    font-size:16px;
+  }
+  .more .read-more{
+    font-size: 18px;
+  }
 }

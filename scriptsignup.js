@@ -1,4 +1,4 @@
-function validate(){
+ function validate(){
     let emaili = document.getElementById("adresaEmailit").value;
     let password = document.getElementById("pass").value;
     let konfirmo = document.getElementById("cnfrmPass").value;
