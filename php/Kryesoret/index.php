@@ -32,6 +32,7 @@ require_once '../controllers/MenuController.php';
         foreach($produkti as $malli){
         echo '<div class="karta1">
           <div class="karta1-foto">
+          
             <a href="#">Shiko gallerine</a>
             <img src="'.$malli['menu_image'].'"class="product-thumb" alt="">
             <button class="card-btn">add to wishlist</button>
