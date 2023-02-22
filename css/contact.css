@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+.kontakt{
+    position: relative;
+    min-height: 100vh;
+    padding:50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+.kontakt .container{
+    max-width: 800px;
+    text-align: center;
+}
+.kontakt .container h2{
+    font-size: 60px;
+    font-weight: 500;
+    color:#e91e63
+}
+
+.kryesorja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.kryesorja .container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.kryesorja .container-left .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.kryesorja .container-left .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.kryesorja .container-left .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+    flex-direction: column;
+    font-weight: 300;
+}
+.kryesorja .container-left .box h3{
+font-weight: 500;
+color: #e91e63;
+}
+.container-right{
+    width: 40%;
+    padding: 40px;
+    background-color: rgb(253, 253, 253);
+}
+.container-right h2{
+    font-size: 30px;
+    color: #000000;
+    font-weight: 500;
+}
+.container-right .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.container-right .inputBox input,
+.container-right .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #e91e63;
+    outline: none;
+    resize: none;
+}
+.container-right .inputBox span{
+    position: absolute;
+    left: 0;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666;
+}
+.container-right .inputBox input:focus ~ span,
+.container-right .inputBox input:valid ~ span,
+.container-right .inputBox textarea:focus ~ span,
+.container-right .inputBox textarea:valid ~ span{
+    font-size: 12px;
+    transform: translateY(-20px);
+    color:#e91e63;
+}
+.container-right .inputBox input[type="submit"]{
+    width: 100%;
+    background:#e91e63;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width:991px) {
+    .kontakt{
+        padding: 50px;
+    }
+    .kryesorja{
+        flex-direction: column;
+    }
+    .kryesorja .container-left{
+        margin-bottom: 40px;
+    }
+    .kryesorja .container-left,
+    .container-right{
+        width: 100%;
+    }
+    
+}
