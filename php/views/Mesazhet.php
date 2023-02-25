@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="../css/menuDashboard.css">
+<link rel="stylesheet" href="dashboard.css">
 <?php
 require_once '../controllers/MenuController.php';
 $menu= new MenuController;
+include "../components/headerAdmin.php";
 ?>
 <div>
     <table class="content-table">
@@ -21,7 +22,7 @@ $menu= new MenuController;
               <td><?php echo $value['Emri_Plote']    ?></td>
               <td><?php echo $value['Email']    ?></td>
               <td><?php echo $value['Mesazhi']    ?></td>
-              <td><a href="delete-messages.php?id=<?php echo $value['ID'];?>" class="delete">Delete</a><td>
+              <td><a href="delete-messages.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php
               }

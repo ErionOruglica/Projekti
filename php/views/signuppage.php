@@ -1,10 +1,9 @@
 <?php
-// session_start();
-require_once '../controllers/MenuController.php';
-$menu= new MenuController;
+require_once '../Controllers/userController.php';
+$useri= new userController;
 if(isset($_POST['kycu'])){
-    if($menu->validoUserin($_POST)<1) {
-    $menu->insertoUser($_POST);
+    if($useri->validoUserin($_POST)<1) {
+    $useri->insertoUser($_POST);
     echo "<script>alert('Useri regjistruar me sukses')</script>";
     } else {
     echo "<script>alert('Useri me kete email ekziston')</script>";
@@ -20,7 +19,7 @@ if(isset($_POST['kycu'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <title>Regjistrohu</title>
 </head>
 <body>
@@ -72,7 +71,7 @@ if(isset($_POST['kycu'])){
 
 
 
-        <script src="scriptsignup.js"></script>
+        <script src="../../scripts/scriptsignup.js"></script>
 
     </section>
     

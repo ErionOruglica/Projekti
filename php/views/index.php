@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../controllers/MenuController.php';
 ?>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ require_once '../controllers/MenuController.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electro Power</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
 </head>
@@ -17,7 +18,8 @@ require_once '../controllers/MenuController.php';
 
     <!--NAVIGIMI NE FAQE-->
     <?php
-    include '../views/header.php';
+    include '../components/header.php';
+    include '../components/footer.php';
     ?>
      <div class="ballina">
         <a href="produktet.html"><img  class ="Ballinaa"src="../Fotot/Fotoja1.jpg" alt=""></a>

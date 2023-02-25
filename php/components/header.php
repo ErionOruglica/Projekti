@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="views/php/css/nav.css"/>
-    <title>Responsive Animated Navbar</title>
+<link rel="stylesheet" href="../../css/nav.css"/>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="/php/Fotot/logo.png" alt="Logo Image">
+            <img src="../../Fotot/logo.png" alt="Logo Image">
         </div>
         <div class="hamburger">
             <div class="line1"></div>
@@ -21,4 +20,4 @@
             <li><button class="join-button" href="#">Join</button></li>
         </ul>
     </nav>
-    <script src="scripts/nav.js"></script>
+    <script src="../../scripts/nav.js"></script>

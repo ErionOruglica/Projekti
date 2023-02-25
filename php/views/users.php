@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="../css/menuDashboard.css">
+<link rel="stylesheet" href="dashboard.css">
 <?php
-require_once '../controllers/MenuController.php';
-$menu= new MenuController;
+require_once '../Controllers/userController.php';
+$useri= new userController;
+include "../components/headerAdmin.php";
 ?>
+<link rel="stylesheet" href="dashboard.css">
 <div>
     <table class="content-table">
         <thead>
@@ -16,14 +18,14 @@ $menu= new MenuController;
         </thead>
             <tbody class="tabela">
               <?php 
-              foreach($menu->readUsers() as $key=>$value){
+              foreach($useri->readUsers() as $key=>$value){
                 ?>
             <tr>
               <td><?php echo $value['Emri']?></td>
               <td><?php echo $value['Mbiemri']?></td>
               <td><?php echo $value['Emaili']?></td>
               <td><?php echo $value['Password']?></td>
-              <td><a href="edit-users.php?id=<?php echo $value['ID'];?>" class ="edito">Edit</a><a href="deleteUsers.php?id=<?php echo $value['ID'];?>" class="delete">Delete</a><td>
+              <td><a href="edit-users.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="deleteUsers.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php
               }

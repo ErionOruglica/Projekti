@@ -1,20 +1,20 @@
-*{
-    font-family: sans-serif; 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+   body{
+    background-image: linear-gradient(to right, #434343 0%, #361620 100%);
   }
-  
   .content-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
     width: 100%;
     border-radius: 5px 5px 0 0;
-    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
   
   .content-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
+    background-color: #131418;
+    color: #e91e63;
     text-align: left;
     font-weight: bold;
   }
@@ -30,7 +30,7 @@
       font-size: 17px;
   }
   .first-link{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 22px;
     padding-left: 50%;
     position: relative;
@@ -38,9 +38,14 @@
   }
   .top-links{
       font-size: 30px;
-      color: black;
+      color: rgb(255, 255, 255);
       padding: 30px;
       text-decoration: none;
+  }
+  .tabela td{
+    color:white;
+    font-weight: 500;
+    font-size: medium;
   }
   .tabela td a{
     padding:10px;
@@ -63,45 +68,4 @@
   }
   .delete:hover{
   color:white;
-  }
-  .ballina{
-    padding: 10px 10vw;
-      display: flex;
-      justify-content: space-between;
-      background-color:black;
-      color:white;
-  }
-  .regjistro{
-    padding:10px;
-    font-size:20px;
-    border-radius:0%;
-    margin-bottom:10px;
-    background-color:#009879;
-    text-transform:uppercase;
-    cursor: pointer;
-    transition:0.5s;
-  }
-  .regjistro:hover{
-    background-color:white;
-    color:black;
-    transition:0s;
-  }
-  .ballina h3{
-    text-transform:uppercase;
-    font-style:italic;
-  }
-  .index{
-    padding:10px;
-    font-size:20px;
-    border-radius:0%;
-    margin-bottom:10px;
-    background-color:#009879;
-    text-transform:uppercase;
-    cursor: pointer;
-    transition:0.5s;
-  }
-  .index:hover{
-    background-color:white;
-    color:black;
-    transition:0s;
   }

@@ -4,20 +4,22 @@ $menu= new MenuController;
 if(isset($_POST['submit'])){
     $menu->insert($_POST);
 }
+include "../components/headerAdmin.php";
 ?>
+<link rel="stylesheet" href="../../css/form.css">
 <div>
     <form method="POST">
-        Image:
-        <input type="file" name="image">
+        Fotoja:
+        <input type="file" class="input" name="image">
         <br>
-        Title:
-        <input type="text" name="title">
+        Titulli:
+        <input type="text" class="input" name="title">
         <br>
-        Body:
-        <textarea name="body"  cols="30" rows="10"></textarea>
-        Price:
-        <input type="text" name="price">
+        Pershkrimi:
+        <textarea name="body" class="input" cols="30" rows="10"></textarea>
+        Cmimi:
+        <input type="text" class="input" name="price">
         <br>
-        <input type="submit" name="submit" value="save">    
+        <input type="submit"  class="input" name="submit" value="save">    
     </form>
 </div>

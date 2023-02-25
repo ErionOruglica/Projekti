@@ -1,8 +1,8 @@
 <?php
-require_once '../controllers/MenuController.php';
-$menu= new MenuController;
+require_once '../controllers/userController.php';
+$user= new userController;
 if(isset($_GET['id'])){
     $deleteid=$_GET['id'];
 }
-$menu->deleteUsers($deleteid);
+$user->deleteUsers($deleteid);
 ?>
