@@ -1,114 +1,177 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
     font-family: "Raleway", sans-serif;
 }
-.navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: whitesmoke;
-    z-index: 9;
+body{
+    overflow-x: hidden;
 }
-.nav{
-    padding: 10px 10vw;
+nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
+    position: sticky;
 }
-.brand-logo{
+
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    margin-top: 10px;
     height: 60px;
 }
-.nav-items{
-    display:flex;
-    align-items: center;
-}
-.search{
-    width: 500px;
+
+.nav-links{
     display: flex;
-}
-.search-box{
-    width: 80%;
-    height: 40px;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    text-transform: capitalize;
-    background: none;
-    color: #000000;
-    outline: none;
-}
-.search-button{
-    width: 20%;
-    height: 40px;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #383838;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
-    font-size: 15px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.search-button:hover {
-    background-color: #000000;
-  }
-
-.search-box::placeholder{
-    color: rgb(255, 0, 0);
-}
-
-.nav-items a{
-    margin-left: 20px;
-    padding: 3px;
-}
-
-.nav-items a img{
-    width: 30px;
-}
-
-.links-container{
-    width: 100%;
-    display: flex;
-    padding: 10px 10vw;
-    justify-content: center;
-    list-style: none;
-    border-top: 1px solid black;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
     justify-content: space-evenly;
-   
+    align-items: center;
+    text-transform: uppercase;
 }
-
-.link{
-    list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: white;
 }
-  
-  .navbar ul li::after {
+.nav-links li a:hover {
+    color: #e91e63;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::before {
     content: "";
+    display: block;
     height: 3px;
-    width: 0;
-    background: #ff0808;
+    width: 0%;
+    background-color: #e91e63;
     position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-  }
-  .navbar ul li:hover::after {
-    width: 100%;
-  }
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
 
+.login-button{
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
 
+}
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: #131418;
+    background-color: #e91e63;
+    border: 1.5px solid #e91e63;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
 
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
 
-
- 
+@media screen and (max-width: 800px){
+    nav{
+        position: sticky;
+        z-index: 999;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animacion per hamburger ne click */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
