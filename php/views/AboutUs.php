@@ -18,12 +18,9 @@ session_start();
     background-color: linear-gradient(to right, #434343 0%, #361620 100%);
     overflow: hidden;
     padding: 100px 0;
-    
-}
-
+    }
     </style>
 <body>
-
     <div class="about-section">
        <div class="inner-container">
             <h1>About Us</h1>

@@ -160,9 +160,13 @@ require_once '../controllers/BestSellers.php';
         }
         ?>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
   </section>  
   <script src="../../scripts/slider.js"></script>
-
+  <h2 class="product-category">Latest arrivals</h2>
     <!--PRODUKTET NE FAQE-->
     <div class="class-rreshti1">
         <?php

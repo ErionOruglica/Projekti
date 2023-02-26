@@ -14,7 +14,7 @@
             <li><a href="../views/index.php">Home</a></li>
             <li><a href="../views/aboutus.php">About us</a></li>
             <li><a href="../views/produktet.php">Products</a></li>
-            <li><a href="">Best Sellers</a></li>
+            <li><a href="#Bestsellers">Best Sellers</a></li>
             <li><a href="../views/contactForm.php">Contact Us</a></li>
             <?php
             if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
