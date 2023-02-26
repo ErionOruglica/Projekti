@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../controllers/MenuController.php';
 require_once '../controllers/BestSellers.php';
 ?>

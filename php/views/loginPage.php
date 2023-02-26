@@ -1,10 +1,16 @@
 
 <?php
+session_start();
 require_once '../Controllers/userController.php';
 $useri= new userController;
 if(isset($_POST['kycu'])){
     if($useri->ekziston($_POST)>0) {
-    echo "<script>alert('Jeni kycur me sukses!')</script>";
+    $userData = $useri->getUser($_POST['Emaili']);
+    $_SESSION['role']=$userData['role'];
+    $_SESSION['Emaili']=$userData['Emaili'];
+    $roli = $userData['role'];
+    echo "<script>alert('Welcome, $roli')</script>";
+    // print_r ($userData);
     header('Location:index.php');
     } else {
     echo "<script>alert('Ju lutem shenoni mire emailin dhe fjalekalimin')</script>";
@@ -38,7 +44,7 @@ if(isset($_POST['kycu'])){
                     </div>
                     <div class="links">
                         <a href="#">Keni harruar fjalekalimin?</a>
-                        <a href="signuppage.html">Nuk keni llogari?</a>
+                        <a href="signuppage.php">Nuk keni llogari?</a>
                     </div>
                     <div class="inputBx">
                         <input type="submit" name="kycu" value="Kyçu" onclick="validate()">

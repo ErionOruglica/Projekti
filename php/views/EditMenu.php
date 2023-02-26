@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../controllers/MenuController.php';
 if(isset($_GET['id'])){
     $menuid=$_GET['id'];
@@ -6,7 +7,7 @@ if(isset($_GET['id'])){
 $menu= new MenuController;
 $currentmenu=$menu->edit($menuid);
 if(isset($_POST['submit'])){
-    $menu->update($_POST,$menuid);
+    $menu->update($_POST,$menuid,$_SESSION['Emaili']);
 }
 include "../components/headerAdmin.php";
 ?>

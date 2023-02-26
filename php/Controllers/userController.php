@@ -19,7 +19,7 @@ require_once '../config/Database.php';
         
 
         public function ekziston($user){
-            $query=$this->db->pdo->prepare('SELECT Emaili, Password from user where Emaili=:Emaili AND Password=:Password');
+            $query=$this->db->pdo->prepare('SELECT Emaili, Password FROM user WHERE Emaili=:Emaili AND Password=:Password');
             $query->bindParam(':Emaili', $user['Emaili']);
             $query->bindParam(':Password', $user['Password']);
             $query->execute();
@@ -49,6 +49,13 @@ require_once '../config/Database.php';
         public function editUsers($id){
             $query=$this->db->pdo->prepare('SELECT * from user WHERE id=:id');
             $query->bindParam(':id',$id);
+            $query->execute();
+
+            return $query->fetch();
+        }
+        public function getUser($email){
+            $query=$this->db->pdo->prepare('SELECT * from user WHERE Emaili=:Emaili');
+            $query->bindParam(':Emaili',$email);
             $query->execute();
 
             return $query->fetch();

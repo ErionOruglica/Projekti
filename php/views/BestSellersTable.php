@@ -29,7 +29,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['Cmimi_Aktual']?></td>
               <td><?php echo $value['Cmimi_Zbritjes']?></td>
               <td><?php echo $value['Perqindja_Zbritjes']?></td>
-              <td></td>
+              <td><?php echo $value['LastEditedBY']?></td>
               <td><a href="edit-bestsellers.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="deleteBestSellers.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php

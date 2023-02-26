@@ -1,4 +1,12 @@
 <?php
+session_start();
+if(isset($_SESSION['role']) && $_SESSION['role'] !== 'admin'){
+  header("Location: index.php");
+  exit();
+} else if(!isset($_SESSION['role'])){
+    header("Location: index.php");
+    exit();
+}
 require_once '../controllers/MenuController.php';
 $menu= new MenuController;
 include "../components/headerAdmin.php";
@@ -25,7 +33,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['menu_title']    ?></td>
               <td><?php echo $value['menu_body']    ?></td>
               <td><?php echo $value['menu_price']    ?></td>
-              <td></td>
+              <td><?php echo $value['LastEditedBY'] ?></td>
               <td><a href="EditMenu.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="DeleteMenu.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php

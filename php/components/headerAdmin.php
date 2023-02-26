@@ -18,7 +18,7 @@
             <li><a href="BestSellersTable.php">Best Sellers</a></li>
             <li><a href="create-bestSellers.php">Shto Best Seller</a></li>
             <li><a href="index.php">Home</a></li>
-            <li><button class="join-button" href="#">log out</button></li>
+            <li><a href="logout.php"><button class="join-button" href="#">log out</button></a></li>
         </ul>
     </nav>
     <script src="../../scripts/nav.js"></script>

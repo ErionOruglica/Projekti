@@ -1,9 +1,11 @@
 <?php
+session_start();
 require_once '../controllers/userController.php';
 if(isset($_GET['id'])){
     $userid=$_GET['id'];
 }
 $user= new userController;
+$admin=$_SESSION['admin'];
 $currentuser=$user->editUsers($userid);
 if(isset($_POST['submit'])){
     $user->updateUsers($_POST,$userid);

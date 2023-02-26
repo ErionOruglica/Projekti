@@ -1,8 +1,13 @@
 <?php
+session_start();
 require_once '../controllers/BestSellers.php';
+if(!isset($_SESSION['Emaili']) && $_SESSION['role'] != 'admin') {
+    header('Location: index.php');
+}
 $bestSellers= new BestSellers;
-if(isset($_POST['submit'])){
-    $bestSellers->insertoProdukte($_POST);
+if(isset($_POST['submit'])&& isset($_SESSION['Emaili'])){
+    $sessioni=$_SESSION['Emaili'];
+    $bestSellers->insertoProdukte($_POST,$sessioni);
     header('Location:../views/BestSellersTable.php');
 }
 include "../components/headerAdmin.php";

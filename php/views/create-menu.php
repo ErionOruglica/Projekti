@@ -1,8 +1,14 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['Emaili']) && $_SESSION['role'] != 'admin') {
+    header('Location: index.php');
+}
 require_once '../controllers/MenuController.php';
 $menu= new MenuController;
-if(isset($_POST['submit'])){
-    $menu->insert($_POST);
+if(isset($_POST['submit'])&& isset($_SESSION['Emaili'])){
+    $sessioni=$_SESSION['Emaili'];
+    $menu->insert($_POST,$sessioni);
 }
 include "../components/headerAdmin.php";
 ?>

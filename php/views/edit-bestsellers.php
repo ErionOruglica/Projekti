@@ -1,12 +1,13 @@
 <?php
 require_once '../controllers/BestSellers.php';
+session_start();
 if(isset($_GET['id'])){
     $menuid=$_GET['id'];
 }
 $bestSeller= new BestSellers;
 $currentproduct=$bestSeller->editoProdukte($menuid);
 if(isset($_POST['submit'])){
-    $bestSeller->updateProdukte($_POST,$menuid);
+    $bestSeller->updateProdukte($_POST,$menuid,$_SESSION['Emaili']);
 }
 include_once "../components/headerAdmin.php";
 ?>

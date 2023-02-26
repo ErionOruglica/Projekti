@@ -16,8 +16,24 @@
             <li><a href="../views/produktet.php">Products</a></li>
             <li><a href="">Best Sellers</a></li>
             <li><a href="../views/contactForm.php">Contact Us</a></li>
-            <li><button class="login-button" href="#">Login</button></li>
-            <li><button class="join-button" href="#">Join</button></li>
+            <?php
+            if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+            ?>
+                <li><a href="../views/MenuDashboard.php">Dashboard</a></li>
+                <?php
+            }
+            if(!isset($_SESSION['Emaili'])) {
+            ?>
+            <li><a href="../views/loginpage.php"><button class="login-button" href="#">Login</button></a></li>
+            <li><a href="../views/signuppage.php"><button class="join-button" href="#">Join</button></a></li>
+            <?php 
+            } else {
+            ?>
+            <li><a href="../views/logout.php"><button class="login-button" href="#">Logout</button></a></li>
+            <?php
+            }
+            ?>
+
         </ul>
     </nav>
     <script src="../../scripts/nav.js"></script>

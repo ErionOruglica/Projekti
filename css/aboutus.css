@@ -16,7 +16,7 @@ body{
 .about-section{
     background: url(../../Fotot/fotojaaa.jpg) no-repeat left;
     background-size: 55%;
-    background-color: #fafafa;
+    background-image: linear-gradient(to right, #434343 0%, #361620 100%);
     overflow: hidden;
     padding: 100px 0;
     
@@ -25,8 +25,7 @@ body{
 .inner-container{
     width: 55%;
     float: right;
-    background-color: #fdfdfd;
-    padding: 150px;
+    background-image: linear-gradient(to right, #434343 0%, #361620 100%);
     border: 3px solid #e91e63;
     border-radius: 10px;
 
@@ -41,7 +40,7 @@ body{
 
 .pershkrimi{
     font-size: 20px;
-    color: #545454;
+    color: #ffffff;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
