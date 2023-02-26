@@ -25,6 +25,8 @@ include "../components/headerAdmin.php";
         Passwordi:
         <input type="text" name="Password" class="input" value="<?php echo $currentuser['Password'];?>">
         <br>
+        <input type="text" name="role" class="input" value="<?php echo $currentuser['role'];?>">
+        <br>
         <input type="submit" name="submit" value="Update" class ="save">    
     </form>
 </div>

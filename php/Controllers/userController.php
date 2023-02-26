@@ -54,11 +54,12 @@ require_once '../config/Database.php';
             return $query->fetch();
         }
         public function updateUsers($request,$id){
-            $query= $this->db->pdo->prepare('UPDATE user SET Emri=:Emri, Mbiemri=:Mbiemri,Emaili=:Emaili,Password=:Password WHERE ID=:id');
+            $query= $this->db->pdo->prepare('UPDATE user SET Emri=:Emri, Mbiemri=:Mbiemri,Emaili=:Emaili,Password=:Password,role=:role WHERE ID=:id');
             $query->bindParam(':Emri',$request['Emri']);
             $query->bindParam(':Mbiemri',$request['Mbiemri']);
             $query->bindParam(':Emaili',$request['Emaili']);
             $query->bindParam(':Password',$request['Password']);
+            $query->bindParam(':role',$request['role']);
             $query->bindParam(':id',$id);
             $query->execute();
             return header('Location:menuDashboard.php');
