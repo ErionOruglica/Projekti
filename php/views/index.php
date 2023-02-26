@@ -161,6 +161,7 @@ require_once '../controllers/BestSellers.php';
         ?>
         </div>
   </section>  
+  <script src="../../scripts/slider.js"></script>
 
     <!--PRODUKTET NE FAQE-->
     <div class="class-rreshti1">
