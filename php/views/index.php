@@ -151,7 +151,7 @@ require_once '../controllers/BestSellers.php';
                 <h2 class="product-brand">'.$malli1['Marka'].'</h2>
                 <p class="product-short-description">'.$malli1['Pershkrimi'].'</p>
                 <button class="blej">Blej tani</button>
-                </span><span class="actual-price">'.$malli1['Cmimi_Aktual'].'</span>
+                </span><span class="price">'.$malli1['Cmimi_Aktual'].'</span>
             </div>
             </div>
             ';

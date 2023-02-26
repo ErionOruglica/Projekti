@@ -120,6 +120,9 @@ color: #e91e63;
     padding: 10px;
     font-size: 18px;
 }
+.container-right .inputBox input[type="submit"]:hover{
+    background:#010101;
+}
 
 @media (max-width:991px) {
     .kontakt{

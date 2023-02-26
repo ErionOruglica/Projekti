@@ -1,5 +1,11 @@
 <?php
-if(isset($POST[ ]))
+require_once "../Controllers/MenuController.php";
+$mesazhet=new MenuController;
+if(isset($_POST['submit'])){
+    $mesazhet->insertMessages($_POST);
+    echo'<script>alert("Mesazhi u dergua me sukses")</script>';
+    header('Location:index.php');
+}
 ?>
 
 <!DOCTYPE html>

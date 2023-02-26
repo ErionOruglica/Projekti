@@ -14,6 +14,7 @@ include "../components/headerAdmin.php";
               <th>Cmimi_Aktual</th>
               <th>Cmimi_Zbritjes</th>
               <th>Perqindja_Zbritjes</th>
+              <th>Added by</th>
               <th>Action</th>
             </tr>
         </thead>
@@ -28,6 +29,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['Cmimi_Aktual']?></td>
               <td><?php echo $value['Cmimi_Zbritjes']?></td>
               <td><?php echo $value['Perqindja_Zbritjes']?></td>
+              <td></td>
               <td><a href="edit-bestsellers.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="deleteBestSellers.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php

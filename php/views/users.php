@@ -13,6 +13,7 @@ include "../components/headerAdmin.php";
               <th>Mbiemri</th>
               <th>Email</th>
               <th>Password</th>
+              <th>Role</th>
               <th>Action</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['Mbiemri']?></td>
               <td><?php echo $value['Emaili']?></td>
               <td><?php echo $value['Password']?></td>
+              <td></td>
               <td><a href="edit-users.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="deleteUsers.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php

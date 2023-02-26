@@ -12,6 +12,7 @@ include "../components/headerAdmin.php";
               <th>Menu title</th>
               <th>Menu body</th>
               <th>Menu Price</th>
+              <th>Added by</th>
               <th>Action</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['menu_title']    ?></td>
               <td><?php echo $value['menu_body']    ?></td>
               <td><?php echo $value['menu_price']    ?></td>
+              <td></td>
               <td><a href="EditMenu.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="DeleteMenu.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php
