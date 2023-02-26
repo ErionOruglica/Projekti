@@ -36,11 +36,12 @@ if(isset($_POST['kycu'])){
                 <h2>Regjistrohu</h2>
                 <form method="POST" class="form">
                     <div class="inputBx">
-                    <input type="text" id="adresaEmailit" name="Emaili"required>
+                    <input type="text" id="adresaEmailit" name="Emaili" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     <i>E-maili</i>
                     </div> 
                     <div class="inputBx">
-                    <input type="password" id="pass" name="Password"required>
+                    <input type="password" id="pass" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
                     <i>Fjalekalimi</i>
                     </div>
                     <div class="inputBx">
@@ -48,11 +49,11 @@ if(isset($_POST['kycu'])){
                         <i>Konfirmo fjalekalimin</i>
                     </div>
                         <div class="inputBx">
-                            <input type="text" id="emri" name="Emri" required>
+                            <input type="text" id="emri" name="Emri" pattern="[a-zA-Z]+" minlength="4" maxlength="10">
                             <i>Emri</i>
                         </div>
                             <div class="inputBx">
-                                <input type="text" id="mbiemri" name="Mbiemri"required>
+                                <input type="text" id="mbiemri" name="Mbiemri" pattern="[a-zA-Z]+" minlength="4" maxlength="10">
                                 <i>Mbiemri</i>
                             </div>
                         <div class=" kushtet e perdorimit">
