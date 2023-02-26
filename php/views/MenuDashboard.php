@@ -24,7 +24,7 @@ include "../components/headerAdmin.php";
               <td><?php echo $value['menu_title']    ?></td>
               <td><?php echo $value['menu_body']    ?></td>
               <td><?php echo $value['menu_price']    ?></td>
-              <td><a href="edit-menu.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="DeleteMenu.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
+              <td><a href="EditMenu.php?id=<?php echo $value['Id'];?>" class ="edito">Edit</a><a href="DeleteMenu.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php
               }

@@ -8,7 +8,7 @@ require_once '../config/Database.php';
         }
 
         public function insertoProdukte($request){
-            $request['Fotoja']='../images/'.$request['Fotoja'];
+            $request['Fotoja']='../../images/'.$request['Fotoja'];
             $query=$this->db->pdo->prepare('INSERT INTO bestsellers (Fotoja,Marka,Pershkrimi,Cmimi_Aktual,Cmimi_Zbritjes,Perqindja_Zbritjes) VALUES(:Fotoja,:Marka,:Pershkrimi,:Cmimi_Aktual,:Cmimi_Zbritjes,:Perqindja_Zbritjes)');
         $query->bindParam(':Fotoja',$request['Fotoja']);
         $query->bindParam(':Marka',$request['Marka']);
@@ -28,6 +28,7 @@ require_once '../config/Database.php';
         }
       
         public function updateProdukte($request,$id){
+            $request['Fotoja']='../../images/'.$request['Fotoja'];
             $query= $this->db->pdo->prepare('UPDATE bestsellers SET Fotoja=:Fotoja, Marka=:Marka,Pershkrimi=:Pershkrimi,Cmimi_Aktual=:Cmimi_Aktual,Cmimi_Zbritjes=:Cmimi_Zbritjes,Perqindja_Zbritjes=:Perqindja_Zbritjes WHERE id=:id');
             $query->bindParam(':Fotoja',$request['Fotoja']);
             $query->bindParam(':Marka',$request['Marka']);

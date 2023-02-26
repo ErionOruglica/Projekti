@@ -343,6 +343,10 @@ body{
     height: 400px;
     overflow: hidden;
   }
+  .karta1-foto img{
+    object-fit: scale-down;
+    }
+
   .malli-zbritje{
     position: absolute;
     background: orangered;
