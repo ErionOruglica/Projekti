@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="dashboard.css">
 <?php
-require_once '../controllers/MenuController.php';
-$menu= new MenuController;
+require_once '../Controllers/MessageController.php';
+$message= new MessageController;
 include "../components/headerAdmin.php";
 ?>
 <div>
@@ -16,7 +16,7 @@ include "../components/headerAdmin.php";
         </thead>
             <tbody class="tabela">
               <?php 
-              foreach($menu->readMessages() as $key=>$value){
+              foreach($message->readMessages() as $key=>$value){
                 ?>
             <tr>
               <td><?php echo $value['Emri_Plote']    ?></td>

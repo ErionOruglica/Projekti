@@ -3,9 +3,7 @@
 require_once '../Controllers/userController.php';
 $useri= new userController;
 if(isset($_POST['kycu'])){
-    $validimi=$useri->ekziston($_POST);
-    if($validimi>=1) {
-    session_start();
+    if($useri->ekziston($_POST)>0) {
     echo "<script>alert('Jeni kycur me sukses!')</script>";
     header('Location:index.php');
     } else {
@@ -31,11 +29,11 @@ if(isset($_POST['kycu'])){
                 <h2>Kyçu</h2>
                 <form method="POST" class="form">
                     <div class="inputBx">
-                    <input type="text" id="adresaEmailit" required>
+                    <input type="text" name="Emaili" id="adresaEmailit" required>
                     <i>E-maili</i>
                     </div> 
                     <div class="inputBx">
-                    <input type="password" id="pass"required>
+                    <input type="password" name="Password" id="pass"required>
                     <i>Fjalekalimi</i>
                     </div>
                     <div class="links">
