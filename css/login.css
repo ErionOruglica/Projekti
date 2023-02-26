@@ -26,7 +26,7 @@ section{
     overflow: hidden;
 }
 section span:hover{
-    background: orangered;
+    background: #e91e63;
     transition: 0s;
 }
 section::before{
@@ -34,7 +34,7 @@ section::before{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#000,orangered,#000);
+    background: linear-gradient(#000,#e91e63,#000);
 }
 section span{
     position: relative;
@@ -68,7 +68,7 @@ section .signin .Permbajtja{
 }
 section .signin .Permbajtja h2{
     font-size: 2em;
-    color: orangered;
+    color: #e91e63;
     text-transform: uppercase;
 }
 section .signin .Permbajtja .form{
@@ -120,12 +120,12 @@ section .signin .Permbajtja .form .inputBx i{
   text-decoration: none;
 }
 .signin .Permbajtja .form .links a:nth-child(2){
-    color: orangered;
+    color: #e91e63;
     font-weight: 600;
   }
   .signin .Permbajtja .form .inputBx input[type="submit"]{
     padding: 10px;
-    background: orangered;
+    background: #e91e63;
     font-weight: 600;
     font-size: 1.25em;
     letter-spacing: 0.05em;
