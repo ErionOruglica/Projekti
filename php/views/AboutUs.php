@@ -15,7 +15,7 @@ session_start();
     .about-section{
     background: url(../../Fotot/fotojaaa.jpg) no-repeat left;
     background-size: 55%;
-    background-image: linear-gradient(to right, #434343 0%, #361620 100%);
+    background-color: linear-gradient(to right, #434343 0%, #361620 100%);
     overflow: hidden;
     padding: 100px 0;
     
