@@ -16,13 +16,14 @@ include "../components/headerAdmin.php";
         </thead>
             <tbody class="tabela">
               <?php 
-              foreach($message->readMessages() as $key=>$value){
+              $mesazhi = $message->readMessages();
+              foreach($mesazhi as $m){
                 ?>
             <tr>
-              <td><?php echo $value['Emri_Plote']    ?></td>
-              <td><?php echo $value['Email']    ?></td>
-              <td><?php echo $value['Mesazhi']    ?></td>
-              <td><a href="delete-messages.php?id=<?php echo $value['Id'];?>" class="delete">Delete</a><td>
+              <td><?php echo $m['Emri_Plote']    ?></td>
+              <td><?php echo $m['Email']    ?></td>
+              <td><?php echo $m['Mesazhi']    ?></td>
+              <td><a href="delete-messages.php?id=<?php echo $m['Id'];?>" class="delete">Delete</a><td>
             </tr>
             <?php
               }

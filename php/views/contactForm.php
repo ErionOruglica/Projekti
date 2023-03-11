@@ -1,6 +1,7 @@
 <?php
-require_once "../Controllers/MenuController.php";
-$mesazhet=new MenuController;
+session_start();
+require_once "../controllers/MessageController.php";
+$mesazhet=new MessageController;
 if(isset($_POST['submit'])){
     $mesazhet->insertMessages($_POST);
     echo "<script>alert('Mesazhi u dergua me sukses')</script>";
@@ -52,18 +53,18 @@ if(isset($_POST['submit'])){
         </div>
     </div>
         <div class="container-right">
-            <form method="POST">
+            <form method="POST" action="">
                 <h2>Dergoni nje mesazh...</h2>
                 <div class="inputBox">
-                    <input type="text" name="EmriPlote" required="required">
+                    <input type="text" name="Emri_Plote" required>
                     <span>Emri i plote</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="Email" required="required">
+                    <input type="text" name="Email" required>
                     <span>Email</span>
                 </div> 
                 <div class="inputBox">
-                    <textarea name="Mesazhi" required="required"></textarea>
+                    <textarea name="Mesazhi" required></textarea>
                     <span>Shkruani mesazhin...</span>
                 </div>
                 <div class="inputBox">

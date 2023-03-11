@@ -12,8 +12,9 @@ require_once '../config/Database.php';
             return $query->fetchAll();
         }
         public function insertMessages($mesazhet){
-            $query=$this->db->pdo->prepare('INSERT INTO messages(Emri_Plote,Email,Mesazhi) VALUES (Emri_Plote=:Emri_Plote,Email=:Email,Mesazhi=:Mesazhi)');
-            $query->bindParam(':Emri_Plote',$mesazhet['EmriPlote']);
+            echo '<script>alert("$mesazhet")</script>'
+            $query=$this->db->pdo->prepare('INSERT INTO messages(Emri_Plote,Email,Mesazhi) VALUES (:Emri_Plote,:Email,:Mesazhi)');
+            $query->bindParam(':Emri_Plote',$mesazhet['Emri_Plote']);
             $query->bindParam(':Email',$mesazhet['Email']);
             $query->bindParam(':Mesazhi',$mesazhet['Mesazhi']);
             $query->execute();
